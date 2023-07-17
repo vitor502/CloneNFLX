@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>NFLX - LINES</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="IMG/NFLXIcon.png"/>
+</head>
+<body>
+    <img src="IMG/NFLXLogo.png" class="logo" alt="LogoNFLX">
+    <script>
+        function stripes(){
+            let sizeW = Math.random() * 5;
+            let l = document.createElement('div');
+            l.classList.add('lines');
+            document.body.appendChild(l);
+            l.style.left = Math.random() * innerWidth + 'px';
+            l.style.width = 1 + sizeW + 'px';
+            l.style.background = 'hsl('+Math.floor(Math.random()* 30)+'deg, 100%, 50%)';
+            
+            setTimeout(function(){
+                document.body.removeChild(l);
+            },2000);
+        }
+
+        setInterval(function(){
+            stripes()
+        },20);
+        stripes()
+    </script>
+</body>
+</html>
