@@ -24,5 +24,6 @@ body{
     background: #ea0914;
     z-index: 1000;
     mix-blend-mode: color-dodge;
-    width: 50px;
+    width: 30px;
+    transition: step-end;
 }
